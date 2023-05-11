@@ -26,7 +26,8 @@ func main() {
 	}
 
 	for _, servidor := range servidores {
-		revisarServidores(servidor)
+		go revisarServidores(servidor)
+		// revisarServidores(servidor)
 	}
 	tiempoPaso := time.Since(inicio)
 	fmt.Printf("Tiempo de ejecucion %s\n", tiempoPaso)
